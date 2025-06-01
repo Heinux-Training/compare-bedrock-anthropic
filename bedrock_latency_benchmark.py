@@ -291,8 +291,8 @@ def compare_methods(bedrock_stats, direct_stats):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Measure API latency for Bedrock and direct Anthropic API')
     parser.add_argument('--source-region', default='eu-north-1', help='Source region (where this script runs)')
-    parser.add_argument('--target-region', default='us-east-1', help='Target region (where Bedrock API is called)')
-    parser.add_argument('--model-id', default='arn:aws:bedrock:us-east-1:654654424505:inference-profile/us.anthropic.claude-sonnet-4-20250514-v1:0', help='Bedrock model ID to use')
+    parser.add_argument('--target-region', default='eu-north-1', help='Target region (where Bedrock API is called)')
+    parser.add_argument('--model-id', default='eu.anthropic.claude-3-7-sonnet-20250219-v1:0', help='Bedrock model ID to use')
     parser.add_argument('--iterations', type=int, default=10, help='Number of API calls to make')
     parser.add_argument('--anthropic-api-key', help='Anthropic API key for direct API calls (optional if set in .env file)')
     parser.add_argument('--direct-model-id', default='claude-sonnet-4-20250514', help='Model ID for direct Anthropic API calls')
